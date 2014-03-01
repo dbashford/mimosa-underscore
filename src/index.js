@@ -1,13 +1,13 @@
 "use strict";
 
-var path = require( 'path' )
-  , config = require( './config' )
+var path = require( "path" )
+  , config = require( "./config" )
   , getExtensions = function ( mimosaConfig ) {
     return mimosaConfig.underscore.extensions;
   };
 
 var prefix = function ( mimosaConfig, libraryPath ) {
-  if ( mimosaConfig.template.wrapType === 'amd' ) {
+  if ( mimosaConfig.template.wrapType === "amd" ) {
     return "define(['" + libraryPath + "'], function (_) { var templates = {};\n";
   } else {
     if ( mimosaConfig.template.wrapType === "common" ) {
@@ -19,8 +19,8 @@ var prefix = function ( mimosaConfig, libraryPath ) {
 };
 
 var suffix = function ( mimosaConfig ) {
-  if ( mimosaConfig.template.wrapType === 'amd' ) {
-    return 'return templates; });';
+  if ( mimosaConfig.template.wrapType === "amd" ) {
+    return "return templates; });";
   } else {
     if ( mimosaConfig.template.wrapType === "common" ) {
       return "\nmodule.exports = templates;";

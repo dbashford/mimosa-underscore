@@ -9,10 +9,10 @@ exports.defaults = function() {
 };
 
 exports.placeholder = function() {
-  return "\t\n\n"+
-         "  # underscore:               # config settings for the Underscore compiler module\n" +
-         "    # lib: undefined    # use this property to provide a specific version of Underscore\n" +
-         "    # extensions: [\"tpl\", \"underscore\"],  # default extensions for Underscore files\n";
+  return "\t\n\n" +
+         "  underscore:               # config settings for the Underscore compiler module\n" +
+         "    lib: undefined    # use this property to provide a specific version of Underscore\n" +
+         "    extensions: [\"tpl\", \"underscore\"],  # default extensions for Underscore files\n";
 };
 
 exports.validate = function( config, validators ) {
@@ -21,7 +21,7 @@ exports.validate = function( config, validators ) {
   if ( validators.ifExistsIsObject( errors, "underscore config", config.underscore ) ) {
 
     if ( !config.underscore.lib ) {
-      config.underscore.lib = require( 'underscore' );
+      config.underscore.lib = require( "underscore" );
     }
 
     if ( validators.isArrayOfStringsMustExist( errors, "underscore.extensions", config.underscore.extensions ) ) {
@@ -33,6 +33,3 @@ exports.validate = function( config, validators ) {
 
   return errors;
 };
-
-
-
