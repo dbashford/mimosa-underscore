@@ -1,6 +1,6 @@
 {
   "name": "mimosa-underscore",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/dbashford/mimosa-underscore",
   "author": "David Bashford",
   "description": "A Underscore client template compiler for Mimosa 2.0+",
@@ -21,7 +21,7 @@
     "underscore"
   ],
   "dependencies": {
-    "underscore": "1.5.2"
+    "underscore": "1.6.0"
   },
   "license": "MIT",
   "main": "./src",
