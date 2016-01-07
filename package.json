@@ -21,7 +21,7 @@
     "underscore"
   ],
   "dependencies": {
-    "underscore": "1.6.0"
+    "underscore": "1.8.x"
   },
   "license": "MIT",
   "main": "./src",
