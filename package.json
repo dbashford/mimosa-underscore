@@ -1,6 +1,6 @@
 {
   "name": "mimosa-underscore",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/dbashford/mimosa-underscore",
   "author": "David Bashford",
   "description": "A Underscore client template compiler for Mimosa 2.0+",
